@@ -13,6 +13,7 @@ const UserSchema = mongoose.Schema({
     image: {
         type: Buffer,
         contentType: String,
+        
     } ,
     imgType: {
         type: String,
