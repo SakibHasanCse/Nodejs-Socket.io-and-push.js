@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</head>
+<body>
+    
+    <div class="row" style="max-width: 200px;">
+      <div class="col s12 m7">
+     
+        <% users.forEach(function(image) { %>
+        <div>
+            <div>
+                <img src="data:image/<%=image.image.contentType%>;base64,
+                     <%=image.image.data.toString('base64')%>">
+                <div>
+                    <h5><%= image.name %></h5>
+                     
+                    <p><%= image.email %></p>
+ 
+                </div>
+            </div>
+        </div>
+        <% }) %>
+    
+      </div>
+    </div>
+</body>
+</html>
