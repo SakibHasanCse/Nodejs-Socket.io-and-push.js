@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 const PostSchema = mongoose.Schema({
     author: {
-        type:Object ,
+        type:mongoose.Schema.Types.ObjectId ,
         ref:'User',
         required: true
     },
@@ -12,6 +12,9 @@ const PostSchema = mongoose.Schema({
     imgType: {
         type: String,
 
+    },
+    description: {
+        type: String,
     }
 
 
